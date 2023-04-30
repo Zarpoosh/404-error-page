@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background-size: 400% 300%;
+  animation: anime 4s infinite;
+  background: linear-gradient(
+    to left,
+    rgba(97, 61, 255, 0.803),
+    rgba(1, 230, 255, 0.684),
+    rgba(193, 5, 255, 0.821)
+  );
+
+  height: 100vh;
+  background-size: 400%;
+}
+.error-page {
+  position: absolute;
+  top: 10%;
+  left: 17%;
+  right: 17%;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.error-page .content {
+  max-width: 600px;
+  text-align: center;
+}
+@keyframes anime {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+/* h1,h2,p */
+.content h1 {
+  font-size: 18vw;
+  line-height: 1em;
+  position: relative;
+}
+.content h1::after {
+  color: transparent;
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(97, 61, 255, 0.803),
+    rgba(1, 230, 255, 0.684),
+    rgba(193, 5, 255, 0.821)
+  );
+
+  background-size: 400%;
+  -webkit-background-clip: text;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  animation: anime 4s ease-in-out infinite;
+}
+.content h4 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #000;
+  max-width: 600px;
+  font-size: 2em;
+}
+.content p {
+  font-size: 1.2em;
+  color: #0d0d0d;
+}
+/* end of h1,h2,p */
+
+/* btns */
+.content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+}
+.content .btns a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  border: 2px solid #69a6ce;
+  color: #69a6ce;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.content .btns a:hover {
+  background-color: #69a6ce;
+  color: #fff;
+}
+/* end of btns */
